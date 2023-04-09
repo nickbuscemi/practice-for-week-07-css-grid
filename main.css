@@ -12,32 +12,40 @@ html, body, div {
 
     /* Phase 1 */
     /* Your code here */
-
+    display: grid;
+    grid-template-columns: 3fr auto 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "header header header"
+        "main . sidebar"
+        "footer footer footer";
+    width: 100%;
     /* Bonus Phase */
     /* Your code here */
+    row-gap: 15px;
 }
 .item-1 {
     background-color: #87a7b3; /* steel blue */
-
+    grid-area: header;
     /* Phase 1 */
     /* Your code here */
 }
 .item-2 {
     background-color: #e1f1dd; /* light sea green */
-
+    grid-area: main;
     /* Phase 1 */
     /* Your code here */
 }
 .item-3 {
     background-color: #cdc7be; /* grey */
-
+    grid-area: sidebar;
     /* Phase 1 */
     /* Your code here */
 }
 .item-4 {
     background-color: #766161; /* brown */
     color: antiquewhite;
-
+    grid-area: footer;
     /* Phase 1 */
     /* Your code here */
 }
@@ -47,6 +55,8 @@ html, body, div {
 
     /* Bonus Phase */
     /* Your code here */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* ====== */
@@ -54,6 +64,15 @@ html, body, div {
 .grid-container-flow {
     border: solid #87a7b3 2px;
     margin: 20px;
+    display: grid;
+    width: auto;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(3, 50px);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
 
     /* Phase 2 */
     /* Your code here */
